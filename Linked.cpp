@@ -323,5 +323,13 @@ void Linked::printInfo(char* name, char* rg, long c, long m,
 }
 
 Linked::~Linked() {
+    Node *aux, *aux2;
+    aux = first;
+    while(aux!= NULL){
+        aux2 = aux->getNext();
+        delete aux;
+        aux = NULL;
+        aux = aux2;
+    }
 }
 

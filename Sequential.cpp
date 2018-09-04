@@ -357,5 +357,6 @@ void Sequential::printInfo(char* name, char* rg, int c, int m,
 }
 
 Sequential::~Sequential() {
+    delete [] start;
 }
 
