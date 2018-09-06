@@ -204,11 +204,12 @@ void Sequential::removeIndex(int index){
         }
         start = new_array;
         n_elements--;
-    }    
-    int stop_s=clock();
+        int stop_s=clock();
     
-    printInfo(name, rg, c, m, (stop_s-start_s)/double(CLOCKS_PER_SEC)
+        printInfo(name, rg, c, m, (stop_s-start_s)/double(CLOCKS_PER_SEC)
             *1000, "removida");
+    }    
+    
 }
 
 void Sequential::searchRg(char* rg){
