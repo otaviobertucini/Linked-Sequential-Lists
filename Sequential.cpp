@@ -264,7 +264,7 @@ void Sequential::importTxt(char* file){
         myfile.close();
         int stop_s=clock();
         cout << "---------------------------------------------------" << endl;
-        cout << "Tempo de execução total (exportar para sequencial): " << 
+        cout << "Tempo de execução total (importar para sequencial): " << 
                 (stop_s-start_s)/double(CLOCKS_PER_SEC)*1000 << endl;
         cout << "---------------------------------------------------" << endl;
     }
@@ -301,6 +301,7 @@ Element* Sequential::newArray(int n, int* m){
 }
 
 void Sequential::exportTxt(char* name){
+    int start_s=clock();
     int i;
     ofstream myfile(name);
     if(myfile.is_open()){
@@ -310,6 +311,11 @@ void Sequential::exportTxt(char* name){
             myfile << start[i].getRg();
             myfile << "\n";
         }
+        int stop_s=clock();
+        cout << "---------------------------------------------------" << endl;
+        cout << "Tempo de execução (exportar sequencial): " << 
+                (stop_s-start_s)/double(CLOCKS_PER_SEC)*1000  << endl;
+        cout << "---------------------------------------------------" << endl;
     }
     else
         cout << "Não foi possível abrir o arquivo!" << endl;

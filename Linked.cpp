@@ -271,7 +271,7 @@ void Linked::exportTxt(char* name){
             aux = aux->getNext();
         }
         int stop_s=clock();
-        cout << "Tempo de execução (exportar lista): " << 
+        cout << "Tempo de execução (exportar encadeada): " << 
                 (stop_s-start_s)/double(CLOCKS_PER_SEC)*1000 << endl;
         cout << "---------------------------------------------------" << endl;
         myfile.close();
@@ -297,11 +297,10 @@ void Linked::importTxt(char* name){
             c++;
             //11748443
             }   
-        cout << "sai" << endl;
         myfile.close();
         int stop_s=clock();
         cout << "---------------------------------------------------" << endl;
-        cout << "Tempo de execução total (exportar para encadeada): " << 
+        cout << "Tempo de execução total (importar para encadeada): " << 
                 (stop_s-start_s)/double(CLOCKS_PER_SEC)*1000 << endl;
         cout << "---------------------------------------------------" << endl;
         }         

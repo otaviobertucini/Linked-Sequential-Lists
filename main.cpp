@@ -7,11 +7,6 @@ using std::cout;
 using std::endl;
 using namespace std;
 
-/*Erros com a alocação de memória para 10M
- * Erro de valor com a contagem de comparações/cópias quando que remover um 
- * índice
- */
-
 int main() {    
     int start_s=clock();
     
